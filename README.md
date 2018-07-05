@@ -57,8 +57,8 @@ This should create the attributes in the database and enable the blocks. As defa
 
 # Support
 
-> NOTE: This extension is provided under the MIT license and I do not accept any responsability for any problems you encounter when using it
-> NOTE: I recommend for design purposes using no more that 6 attributes without modifications to the CSS and block layout
-> NOTE: This was designed for the LUMA theme and works fine with Magento 2 out of the box, I cannot help with any situations where the extension does not work with a custom theme or has conflicting extensions
+> - NOTE: This extension is provided under the MIT license and I do not accept any responsability for any problems you encounter when using it
+> - NOTE: I recommend for design purposes using no more that 6 attributes without modifications to the CSS and block layout
+> - NOTE: This was designed for the LUMA theme and works fine with Magento 2 out of the box, I cannot help with any situations where the extension does not work with a custom theme or has conflicting extensions
 
 If you have any questions or improvment suggestions please submit them as an issue. Any bugs you find then also please submit them as an issue with a detailed explination of how to replicate the problem and I will endevour to do my best to help.
