@@ -1,0 +1,49 @@
+<?php if ($this->isBlockEnabled() === true): ?>
+
+    <ul class="product-info-icons">
+
+        <?php foreach($this->getAttrCodeList() as $attrCode): ?>
+
+            <?php if($this->isDisplayAttribute($attrCode) === true): ?>
+
+                <?php $data = $this->getAttributeData($attrCode); ?>
+
+                <li>
+                    <img title="<?php echo $data; ?>" src="<?php echo $this->getViewFileUrl('TPB_ProductIcons::images'. DIRECTORY_SEPARATOR . $attrCode . DIRECTORY_SEPARATOR . $this->getIconFileNameByAttributeData($data, $attrCode)); ?>" />
+                    <span><?php echo $data; ?></span>
+                </li>
+
+            <?php endif; ?>
+
+        <?php endforeach; ?>
+
+    </ul>
+
+    <div class="clear"></div>
+
+<?php endif; ?>
+
+<style>
+    .product-info-icons {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid #c1c1c1;
+        padding-top:20px;
+    }
+    .product-info-icons li img{
+        width: 50px;
+    }
+    .product-info-icons li {
+        float: left;
+        vertical-align: middle;
+        width: 50%;
+    }
+    .product-info-icons span {
+        position:relative;
+        top: -20px;
+    }
+    .clear{
+        clear:both;
+    }
+</style>

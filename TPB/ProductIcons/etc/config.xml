@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <producticons>
+            <general>
+                <enableproductinfo>0</enableproductinfo>
+                <enableproducttopbar>1</enableproducttopbar>
+                <displaysize>1</displaysize>
+            </general>
+        </producticons>
+    </default>
+</config>

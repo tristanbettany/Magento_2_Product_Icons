@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="TPB\ProductIcons\Block\ProductInfoIcons" name="product.info.icons" template="product_info_icons.phtml" after="-" />
+        </referenceContainer>
+        <referenceContainer name="main">
+            <block class="TPB\ProductIcons\Block\ProductTopBarIcons" name="product.topbar.icons" template="product_topbar_icons.phtml" before="-" />
+        </referenceContainer>
+    </body>
+</page>
