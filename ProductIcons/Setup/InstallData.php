@@ -8,6 +8,7 @@ use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Catalog\Model\Product;
+use TPB\ProductIcons\Attributes\AttributeConfig;
 use TPB\ProductIcons\Attributes\Construction;
 use TPB\ProductIcons\Attributes\Gauge;
 use TPB\ProductIcons\Attributes\HandLinked;
@@ -42,21 +43,14 @@ class InstallData implements InstallDataInterface
         ModuleDataSetupInterface $setup,
         ModuleContextInterface   $context
     ) {
-        $attributes = [
-            Yarn::class,
-            Gauge::class,
-            ManufactureLocation::class,
-            HandLinked::class,
-            Length::class,
-            Construction::class,
-        ];
+        foreach(AttributeConfig::getAttributeConfig() as $attribute) {
+            $class = $attribute['class'];
 
-        foreach($attributes as $attribute) {
             $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
             $eavSetup->addAttribute(
                 Product::ENTITY,
-                $attribute::ATTR_CODE,
-                $attribute::getAttributeInstallConfig()
+                $class::ATTR_CODE,
+                $class::getAttributeInstallConfig()
             );
         }
     }
