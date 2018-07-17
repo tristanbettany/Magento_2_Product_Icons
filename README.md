@@ -8,7 +8,7 @@ This is an extension for Magento 2 ONLY. It allows you to display Icons in place
 
 I recommend you fork the extension files to your own github account and then modify to your own needs. The code comes with one sample Icon and will require some development knowledge to to set up more.
 
-After cloning the fork from your account into the folder ```app/code/TPB``` you really want to set up all the product icons you want before you run ```php bin/magento setup:upgrade```
+After cloning the fork from your account into the folder ```app/code/TPB/ProductIcons``` you really want to set up all the product icons you want before you run ```php bin/magento setup:upgrade```
 
 To set up the extensions with your own attributes to use as icons youll need to copy the already existing Size attribute class located at ```Attributes/Size.php``` to something that represents the name of your new one. Once editing your new copy of this class you will see you need to change the following things:
 
